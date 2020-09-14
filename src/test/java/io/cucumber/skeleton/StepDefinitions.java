@@ -1,47 +1,30 @@
 package io.cucumber.skeleton;
 
-import io.cucumber.java.After;
-import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import java.util.Locale;
-import java.util.concurrent.TimeUnit;
+import static java.util.concurrent.TimeUnit.HOURS;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class StepDefinitions {
+    private Belly belly;
 
-    private final Dreamer dreamer = new Dreamer();
-    private Dreamer.Dream dream;
-
-    @Given("a dream takes {long} {timeUnit}")
-    public void aDreamTakesDurationUnit(long amount, TimeUnit unit) {
-        dream = new Dreamer.Dream(amount, unit);
+    @Given("I have {int} cukes in my belly")
+    public void I_have_cukes_in_my_belly(int cukes) {
+        belly = new Belly();
+        belly.eat(cukes);
     }
 
-    @When("a dreamer experiences the dream")
-    public void theDreamerExperiencesTheDream() {
-        dreamer.experience(dream);
+    @When("I wait {int} hour(s)")
+    public void I_wait_hours(int hours) {
+        belly.timePasses(hours, HOURS);
     }
 
-    @Then("they'll be awake after at most {long} {timeUnit}")
-    public void iLlBeDoneInAtLeastDurationUnit(long timeout, TimeUnit unit) throws InterruptedException {
-        dreamer.tryToWake(timeout, unit);
-    }
 
-    @After
-    public void after(){
-        dreamer.retire();
-    }
-
-    @ParameterType("(second|minute)s?")
-    public TimeUnit timeUnit(String timeUnit) {
-        timeUnit += "s";
-        for (TimeUnit value : TimeUnit.values()) {
-            if (value.name().toLowerCase(Locale.US).equals(timeUnit)) {
-                return value;
-            }
-        }
-        throw new IllegalArgumentException(timeUnit);
+    @Then("my belly should growl")
+    public void my_belly_should_growl() {
+        assertThat(belly.getStatus(), is("Growling!"));
     }
 }
