@@ -36,5 +36,9 @@ public class RunCucumberTest {
 ```
 
 Usage:
- * clone https://github.com/mpkorstanje/junit-platform-suite-engine and run `mvn install`
- * Then run `RunCucumberTest`   
+ * git clone https://github.com/mpkorstanje/junit-platform-suite-engine 
+ * cd junit-platform-suite-engine
+ * `mvn install`
+ * cd ..
+ * git clone https://github.com/mpkorstanje/junit-platform-suite-demo
+ * Run `RunCucumberTest`   
