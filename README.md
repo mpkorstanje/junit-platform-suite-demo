@@ -1,6 +1,16 @@
 JUnit Platform Suite Demo
 =========================
 
+Usage:
+ * `git clone https://github.com/mpkorstanje/junit-platform-suite-engine` 
+ * `cd junit-platform-suite-engine`
+ * `mvn install`
+ * `cd ..`
+ * `git clone https://github.com/mpkorstanje/junit-platform-suite-demo`
+ * Run `RunSuiteTest` in IDEA
+
+## Why?
+
 The `junit-platform-suite-engine` is a test engine that uses the JUnit Platform
 Launcher to run suites of tests. This can be useful. For example when running
 Cucumber.
@@ -45,11 +55,3 @@ public class RunSuiteTest {
 
 }
 ```
-
-Usage:
- * `git clone https://github.com/mpkorstanje/junit-platform-suite-engine` 
- * `cd junit-platform-suite-engine`
- * `mvn install`
- * `cd ..`
- * `git clone https://github.com/mpkorstanje/junit-platform-suite-demo`
- * Run `RunSuiteTest` in IDEA
