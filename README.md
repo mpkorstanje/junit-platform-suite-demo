@@ -47,9 +47,9 @@ public class RunSuiteTest {
 ```
 
 Usage:
- * git clone https://github.com/mpkorstanje/junit-platform-suite-engine 
- * cd junit-platform-suite-engine
+ * `git clone https://github.com/mpkorstanje/junit-platform-suite-engine` 
+ * `cd junit-platform-suite-engine`
  * `mvn install`
- * cd ..
- * git clone https://github.com/mpkorstanje/junit-platform-suite-demo
- * Run `RunSuiteTest` in IDEA  
+ * `cd ..`
+ * `git clone https://github.com/mpkorstanje/junit-platform-suite-demo`
+ * Run `RunSuiteTest` in IDEA
