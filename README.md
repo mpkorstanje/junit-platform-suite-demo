@@ -35,10 +35,21 @@ public class RunCucumberTest {
 }
 ```
 
+Suites also work with multiple engines at the same time:
+
+```java
+@Suite
+@SelectClasses(JupiterTest.class) // This selector is picked up by Jupiter
+@SelectClasspathResource("io/cucumber/skeleton") // This selector is picked up by Cucumber
+public class RunSuiteTest {
+
+}
+```
+
 Usage:
  * git clone https://github.com/mpkorstanje/junit-platform-suite-engine 
  * cd junit-platform-suite-engine
  * `mvn install`
  * cd ..
  * git clone https://github.com/mpkorstanje/junit-platform-suite-demo
- * Run `RunCucumberTest` in IDEA  
+ * Run `RunSuiteTest` in IDEA  
