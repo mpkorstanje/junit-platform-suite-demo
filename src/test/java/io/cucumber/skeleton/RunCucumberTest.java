@@ -1,7 +1,9 @@
 package io.cucumber.skeleton;
 
-import io.cucumber.junit.platform.engine.Cucumber;
+import com.github.mpkorstanje.junit.platform.suite.SelectClasspathResource;
+import com.github.mpkorstanje.junit.platform.suite.Suite;
 
-@Cucumber
+@Suite
+@SelectClasspathResource("io/cucumber/skeleton")
 public class RunCucumberTest {
 }
