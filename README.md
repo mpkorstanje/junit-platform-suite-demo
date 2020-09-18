@@ -24,7 +24,7 @@ public class RunCucumberTest {
 }
 ```
 
-When using annotations the JUnit platform will execute the test for you:   
+By using annotations the JUnit platform will execute the test for you:   
 
 ```java
 @Suite
