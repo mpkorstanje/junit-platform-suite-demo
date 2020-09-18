@@ -41,4 +41,4 @@ Usage:
  * `mvn install`
  * cd ..
  * git clone https://github.com/mpkorstanje/junit-platform-suite-demo
- * Run `RunCucumberTest`   
+ * Run `RunCucumberTest` in IDEA  
