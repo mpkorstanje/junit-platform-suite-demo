@@ -13,7 +13,7 @@
         <java.version>1.8</java.version>
         <maven.compiler.version>3.3</maven.compiler.version>
         <maven.surefire.version>2.22.2</maven.surefire.version>
-        <junit.version>5.8.0-SNAPSHOT</junit.version>
+        <junit.version>5.8.0-M1</junit.version>
         <cucumber.version>6.7.0</cucumber.version>
         <hamcrest.version>2.2</hamcrest.version>
     </properties>

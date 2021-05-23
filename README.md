@@ -2,10 +2,6 @@ JUnit Platform Suite Demo
 =========================
 
 Usage:
- * `git clone -b junit-platform-suite-engine https://github.com/mpkorstanje/junit5` 
- * `cd junit5`
- * `./gradlew publishToMavenLocal -x test`
- * `cd ..`
  * `git clone https://github.com/mpkorstanje/junit-platform-suite-demo`
  * Run `RunSuiteTest` in IDEA
 
